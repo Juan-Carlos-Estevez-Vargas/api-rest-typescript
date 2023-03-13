@@ -1,35 +1,35 @@
 import { Request, Response } from "express"
 import { handleHttp } from "../utils/error.handle"
 
-const getItem = (request: Request, response: Response) => {
+const getBlog = (request: Request, response: Response) => {
   try {
 
   } catch (e) {
     handleHttp(response, "ERROR_GET_BLOG");
   }
 }
-const getItems = (request: Request, response: Response) => {
+const getBlogs = (request: Request, response: Response) => {
   try {
 
   } catch (e) {
     handleHttp(response, "ERROR_GET_BLOGS");
   }
 }
-const updateItem = (request: Request, response: Response) => {
+const updateBlog = (request: Request, response: Response) => {
   try {
 
   } catch (e) {
     handleHttp(response, "ERROR_UPDATE_BLOG");
   }
 }
-const postItem = ({ body }: Request, response: Response) => {
+const postBlog = ({ body }: Request, response: Response) => {
   try {
     response.send(body);
   } catch (e) {
     handleHttp(response, "ERROR_POST_BLOG");
   }
 }
-const deleteItem = (request: Request, response: Response) => {
+const deleteBlog = (request: Request, response: Response) => {
   try {
 
   } catch (e) {
@@ -37,4 +37,4 @@ const deleteItem = (request: Request, response: Response) => {
   }
 }
 
-export { getItem, getItems, updateItem, postItem, deleteItem }
+export { getBlog, getBlogs, updateBlog, postBlog, deleteBlog }
